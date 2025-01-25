@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Dishes</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero {
+            background: url('./we.jpg') no-repeat center center;
+            background-size: cover;
+            text-color:#5CB338;
+            text-align: center;
+            padding: 100px 20px;
+            font-family: 'Arial', sans-serif;
+            color: #FFFFFF;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            color:#5CB338;
+        }
+        
+        .dish-image {
+            width: 300px;
+            margin-top: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1 class="display-4"><b>Welcome to Our Restaurant<b></h1>
+        <p class="lead">Discover our delicious menu and reserve your table today!</p>
+        <a href="#menu" class="btn btn-primary btn-lg">Explore Menu</a>
+    </div>
+
+    <div class="container py-5">
+        <div id="menu" class="mb-5">
+            <h2 class="section-title">Menu Options</h2>
+            <div class="d-flex justify-content-center gap-3">
+                <button type="button" class="btn btn-outline-primary">View Full Menu</button>
+                <button type="button" class="btn btn-outline-secondary">Order Online</button>
+                <button type="button" class="btn btn-outline-success">Today's Specials</button>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="section-title">Featured Dishes</h2>
+            <div class="row text-center">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="grills.jpg" class="card-img-top" alt="Grilled Salmon">
+                        <div class="card-body">
+                            <h5 class="card-title">Grilled Salmon</h5>
+                            <p class="card-text">Fresh salmon served with a side of vegetables and lemon butter sauce.</p>
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="pizza.jpg" class="card-img-top" alt="Margherita Pizza">
+                        <div class="card-body">
+                            <h5 class="card-title">Margherita Pizza</h5>
+                            <p class="card-text">Classic Italian pizza topped with fresh basil, mozzarella, and tomato sauce.</p>
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="thir.jpg" class="card-img-top" alt="Tiramisu">
+                        <div class="card-body">
+                            <h5 class="card-title">Tiramisu</h5>
+                            <p class="card-text">A classic Italian dessert layered with coffee-soaked ladyfingers and mascarpone cream.</p>
+                            <a href="#" class="btn btn-primary">Order Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-5">
+            <h2 class="section-title">Dish of the Day</h2>
+            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#dishModal">View Details</button>
+
+            <div class="modal fade" id="dishModal" tabindex="-1" aria-labelledby="dishModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="dishModalLabel">Dish of the Day</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Today's special is "Pan-Seared Steak with Garlic Butter Sauce"! A flavorful and tender dish.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="spcl.jpg" alt="Dish of the Day" class="dish-image">
+        </div>
+
+        <div class="mb-5">
+            <h2 class="section-title">Reserve a Table</h2>
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="nameInput" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="nameInput" placeholder="John Doe">
+                </div>
+                <div class="col-md-6">
+                    <label for="emailInput" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="emailInput" placeholder="example@email.com">
+                </div>
+                <div class="col-md-6">
+                    <label for="dateInput" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="dateInput">
+                </div>
+                <div class="col-md-6">
+                    <label for="timeInput" class="form-label">Time</label>
+                    <input type="time" class="form-control" id="timeInput">
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary w-100">Reserve Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
